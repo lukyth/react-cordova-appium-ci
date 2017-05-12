@@ -1,0 +1,19 @@
+{
+  "name": "tw-appium",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:lukyth/tw-appium.git",
+  "author": "Kanitkorn S. <k.sujautra@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard src && mocha src/android.js"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "colors": "^1.1.2",
+    "mocha": "^3.3.0",
+    "standard": "^10.0.2",
+    "wd": "^1.2.0"
+  }
+}

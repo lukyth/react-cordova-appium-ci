@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "displayName": "HelloCordova",
     "scripts": {
-        "build": "rm -rf www && cd .. && npm run build && cp -R build cordova/www && cd cordova && cordova build android --debug"
+        "build": "rm -rf www && cd .. && npm run build && cp -R build cordova/www && cd cordova && cordova build android --debug",
+        "test": "cd e2e && npm run test"
     },
     "cordova": {
         "platforms": [

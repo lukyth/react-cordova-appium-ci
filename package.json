@@ -2,6 +2,7 @@
   "name": "cordova",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "devDependencies": {
     "react-scripts": "0.9.5"
   },
@@ -12,7 +13,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:cordova": "cd cordova && npm run build",
     "test": "react-scripts test --env=jsdom",
+    "test:cordova": "cd cordova && npm run build && npm run test",
     "eject": "react-scripts eject"
   }
 }
