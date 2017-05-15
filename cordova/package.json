@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "displayName": "ReactCordova",
     "scripts": {
-        "build": "rm -rf www && cd .. && npm run build && cp -R build cordova/www && cd cordova && cordova build android --debug && cordova build ios --debug",
+        "build": "./build.sh",
         "test": "cd e2e && npm run test"
     },
     "cordova": {

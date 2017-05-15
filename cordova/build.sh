@@ -1,5 +1,9 @@
 #!/bin/zsh -e
 
-cd `dirname $0`
+rm -rf www
+cd ..
+npm run build
+cp -R build cordova/www
+cd cordova
 cordova build android --debug
-npm run test
+cordova build ios --debug

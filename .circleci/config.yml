@@ -27,4 +27,4 @@ jobs:
           name: E2E test
           command: |
             rsync -avz --progress -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p ${SSH_PORT}" /root/react-cordova-appium-ci/build/ ${REMOTE_SERVER}:~/Code/react-cordova-appium-ci/cordova/www
-            ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p ${SSH_PORT} ${REMOTE_SERVER} "zsh --login -c './Code/react-cordova-appium-ci/cordova/build.sh'"
+            ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p ${SSH_PORT} ${REMOTE_SERVER} "zsh --login -c './Code/react-cordova-appium-ci/cordova/ci.sh'"
