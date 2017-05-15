@@ -6,7 +6,7 @@
   "author": "Kanitkorn S. <k.sujautra@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "standard src && mocha src/android.js"
+    "test": "standard src && mocha src/test.js"
   },
   "devDependencies": {
     "chai": "^3.5.0",

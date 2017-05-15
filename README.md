@@ -1,10 +1,6 @@
 # React Cordova Appium CI
 A POC for React-Cordova app's CI/CD flow using CircleCI.
 
-*TODO*
-- [ ] E2E for iOS
-- [ ] Improve the doc
-
 *This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).*
 
 ## Setup E2E Test Machine (Mac OS)
@@ -26,6 +22,7 @@ Make sure you get all pass from `appium-doctor`.
 ```bash
 cd cordova
 cordova platform add android@6.2.1
+cordova platform add ios
 ```
 Neet to fix the version because there's a bug on the latest version.
 
