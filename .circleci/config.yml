@@ -26,5 +26,5 @@ jobs:
       - run:
           name: E2E test
           command: |
-            rsync -avz --progress -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p ${SSH_PORT}" /home/ubuntu/react-cordova-appium-ci/build/ ${REMOTE_SERVER}:${REMOTE_PROJECT_DIR}/cordova/www
+            rsync -avz --progress -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p ${SSH_PORT}" /root/react-cordova-appium-ci/build/ ${REMOTE_SERVER}:${REMOTE_PROJECT_DIR}/cordova/www
             ssh -p ${SSH_PORT} ${REMOTE_SERVER} 'cd ${REMOTE_PROJECT_DIR}/cordova && cordova build android --debug && npm run test'
