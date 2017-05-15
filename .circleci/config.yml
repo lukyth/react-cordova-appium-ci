@@ -19,6 +19,11 @@ jobs:
           name: Build web
           command: npm run build
       - run:
+          name: Install E2E script dependencies
+          command: |
+            apt update
+            apt install -y rsync
+      - run:
           name: E2E test
           command: |
             rsync -avz --progress -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p ${SSH_PORT}" /home/ubuntu/react-cordova-appium-ci/build/ ${REMOTE_SERVER}:${REMOTE_PROJECT_DIR}/cordova/www
