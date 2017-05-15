@@ -6,9 +6,10 @@ A POC for React-Cordova app's CI/CD flow using CircleCI.
 ## Setup E2E Test Machine (Mac OS)
 
 ### Prerequisite
-- Homebrew
-- Nodejs
-- Android Studio
+- [Homebrew](https://brew.sh/)
+- [Nodejs](https://nodejs.org/en/)
+- [Android Studio](https://developer.android.com/studio/index.html)
+- [Xcode](https://developer.apple.com/xcode/)
 
 ### Install dependencies
 ```bash
@@ -18,7 +19,7 @@ cd cordova/e2e
 npm install
 ```
 
-Make sure you get all pass from `appium-doctor`.
+**Make sure you get all pass from `appium-doctor`.**
 
 ### Add cordova platforms
 ```bash
