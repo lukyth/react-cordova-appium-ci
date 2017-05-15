@@ -6,11 +6,13 @@ A POC for React-Cordova app's CI/CD flow using CircleCI.
 ## Setup E2E Test Machine (Mac OS)
 
 ### Prerequisite
+- Homebrew
 - Nodejs
 - Android Studio
 
 ### Install dependencies
 ```bash
+brew install autossh
 npm install -g appium appium-doctor cordova
 cd cordova/e2e
 npm install
@@ -37,7 +39,8 @@ cp patches/webview-helpers.js ${GLOBAL_NODE_MODULES_DIR}/appium-android-driver/b
 ```bash
 appium
 ${PATH_TO_ANDROID_SDK}/tools/emulator -avd Nexus_5X_API_25_GPU
-ssh -fN -R ${PROXY_MACHINE_IP}:${PORT_FOR_SSH_TUNNEL}:localhost:22 ${TEST_MACHINE_USER}@${PROXY_MACHINE_IP}
+autossh -M 10900 -fN -o "PubkeyAuthentication=yes" -o "StrictHostKeyChecking=false" -o "PasswordAuthentication=no" -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -R ${PROXY_MACHINE_IP}:${PORT_FOR_SSH_TUNNEL}:localhost:22 ${TEST_MACHINE_USER}@${PROXY_MACHINE_IP}
+# You may want to run these command at startup
 ```
 
 ## Setup Proxy Machine
