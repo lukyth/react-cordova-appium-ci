@@ -3,6 +3,7 @@ A POC for React-Cordova app's CI/CD flow using CircleCI.
 
 *TODO*
 - [ ] E2E for iOS
+- [ ] Improve the doc
 
 *This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).*
 
