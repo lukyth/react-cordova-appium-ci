@@ -18,25 +18,7 @@ exports.config = {
   /**
    * capabilities
    */
-  capabilities: [
-    {
-      browserName: '',
-      deviceName: 'any value; Appium uses the first device from *adb devices*',
-      platformName: 'Android',
-      app: '/Users/kanitkorn/Code/react-cordova-appium-ci/cordova/platforms/android/build/outputs/apk/android-armv7-debug.apk',
-      androidDeviceSocket: 'com.kanitkorn.reactcordova_devtools_remote',
-      chromeOptions: {
-        androidDeviceSocket: 'com.kanitkorn.reactcordova_devtools_remote'
-      }
-    },
-    {
-      automationName: 'XCUITest',
-      browserName: '',
-      deviceName: 'iPhone 5s',
-      platformName: 'iOS',
-      app: '/Users/kanitkorn/Code/react-cordova-appium-ci/cordova/platforms/ios/build/emulator/ReactCordova.app'
-    }
-  ],
+  capabilities: require('./helpers/caps'),
 
   /**
    * test configurations
@@ -45,7 +27,6 @@ exports.config = {
   coloredLogs: true,
   waitforTimeout: 10000,
   framework: 'mocha',
-
   reporters: ['spec'],
 
   /**
