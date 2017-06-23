@@ -10,6 +10,7 @@ exports.config = {
   waitforTimeout: 10000,
   framework: 'mocha',
   reporters: ['spec'],
+  services: ['appium'],
   before: () => {
     const chai = require('chai')
     global.expect = chai.expect
