@@ -1,38 +1,16 @@
 /* global browser */
 
 exports.config = {
-
-  /**
-   * server configurations
-   */
   host: 'localhost',
   port: 4723,
-
-  /**
-   * specify test files
-   */
-  specs: [
-    './src/test.js'
-  ],
-
-  /**
-   * capabilities
-   */
+  specs: ['./src/tests/**/*.js'],
   capabilities: require('./helpers/caps'),
-
-  /**
-   * test configurations
-   */
   logLevel: 'verbose',
   coloredLogs: true,
   waitforTimeout: 10000,
   framework: 'mocha',
   reporters: ['spec'],
-
-  /**
-   * hooks
-   */
-  before: function () {
+  before: () => {
     const chai = require('chai')
     global.expect = chai.expect
     chai.should()

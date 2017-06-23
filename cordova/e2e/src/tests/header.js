@@ -1,6 +1,6 @@
 /* global it, describe, browser */
 
-describe('app', function () {
+describe('header', function () {
   this.timeout(300000)
 
   it('should find header elements', () => {
