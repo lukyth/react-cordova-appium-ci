@@ -7,8 +7,7 @@
   "license": "MIT",
   "scripts": {
     "test": "wdio src/wdio.conf.js",
-    "test:lint": "standard src/**/*.js",
-    "server": "appium"
+    "test:lint": "standard src/**/*.js"
   },
   "devDependencies": {
     "appium": "^1.6.5",
