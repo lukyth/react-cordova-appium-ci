@@ -6,15 +6,16 @@
   "author": "Kanitkorn S. <k.sujautra@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "standard src && mocha src/test.js"
+    "test": "wdio src/wdio.conf.js",
+    "test:lint": "standard src/**/*.js",
+    "server": "appium"
   },
   "devDependencies": {
     "appium": "^1.6.5",
     "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
-    "colors": "^1.1.2",
-    "mocha": "^3.3.0",
     "standard": "^10.0.2",
+    "wdio-mocha-framework": "^0.5.10",
+    "wdio-spec-reporter": "^0.1.0",
     "webdriverio": "^4.8.0"
   }
 }
