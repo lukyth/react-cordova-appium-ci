@@ -1,8 +1,8 @@
 {
-  "name": "tw-appium",
+  "name": "react-cordova-appium-ci/e2e",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:lukyth/tw-appium.git",
+  "repository": "git@github.com:lukyth/react-cordova-appium-ci.git",
   "author": "Kanitkorn S. <k.sujautra@gmail.com>",
   "license": "MIT",
   "scripts": {
