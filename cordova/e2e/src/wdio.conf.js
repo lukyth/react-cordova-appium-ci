@@ -5,6 +5,7 @@ exports.config = {
   port: 4723,
   specs: ['./src/tests/**/*.js'],
   capabilities: require('./helpers/caps'),
+  maxInstances: 1,
   logLevel: 'verbose',
   coloredLogs: true,
   waitforTimeout: 10000,
